@@ -1,0 +1,244 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*  settings */
+
+.body
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+}
+
+.group
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div1
+{
+    margin: 5px;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div2
+{
+    margin: 5px;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div3
+{
+    margin: 5px;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div4
+{
+    margin: 5px;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div1
+{
+    margin: 5px;
+    padding: 10px;
+    height: 75px;
+    width: 125px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#div2
+{
+    margin: 5px;
+    padding: 10px;
+    height: 45px;
+    width: 70px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div3
+{
+    margin: 5px;
+    padding: 10px;
+    height: 70px;
+    width: 105px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#div3 #div3
+{
+    margin: 5px;
+    padding: 10px;
+    height: 60px;
+    width: 100px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#div4
+{
+    margin: 5px;
+    padding: 10px;
+    height: 75px;
+    width: 125px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#div5
+{
+    margin: 5px;
+    padding: 10px;
+    height: 75px;
+    width: 125px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div6
+{
+    margin: 5px;
+    padding: 10px;
+    height: 75px;
+    width: 125px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div7
+{
+    margin: 5px;
+    padding: 10px;
+    height: 75px;
+    width: 125px;
+    background-color: rgb(96, 4, 7);
+    border: 2px black solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p
+{
+    color: black;
+    font-size: x-small;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+/* animations */
+
+.div1:active #div1
+{
+    /* since its  , everything inside .div1 that is #div1 will move no matter what
+    even if it a #div1 is inside another #div1 */
+    transform: translateY(-125px);
+    transition: ease-in-out;
+    transition-duration: 1.5s;
+}
+
+.div2:hover > #div3
+{
+    /* since its >, everything that is DIRECTLY inside .div2 that is #div3 will move 
+    meaning that if theres a #div3 inside another div that is inside .div2, it will not move */
+    transform: translateY(125px);
+    transition: ease-in-out;
+    transition-duration: 1s;
+}
+
+.div3:active + #div5
+{
+    /* since its +, the object that is DIRECTLY after or every sibling of.div3 in the html code
+    that is #div5 will move meaning, if there is two #div5s,
+    the first one after .div3 will move */
+    transform: rotate(360deg);
+    transition: ease-out;
+    transition-duration: 1s;
+}
+
+.div4:hover ~ #div7
+{
+    /* since its ~, everything that is after or every sibling of .div4 in the html code that is #div7
+    will move */
+    transform: skewY(-25deg);
+    transition: ease-in-out;
+    transition-duration: 1s;
+}

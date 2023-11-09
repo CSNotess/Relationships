@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationships</title>
+</head>
+<body>
+    <div class="body">
+        <div class="div1">
+            <p>
+                (blank)
+            </p>
+            <div id="div1">
+                <p>
+                    i move because im div 1 and also inside the .div1
+                </p>
+                <div id="div1">
+                    <div id="div2">
+                        <p>
+                            i dont move because im div2 but im inside a #div1
+                            <br>
+                            (hold)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div2">
+            <div id="div3">
+                <div id="div3">
+                    <p>
+                        im #div3 but i dont move because im not directly inside .div3
+                    </p>
+                </div>
+            </div>
+            <div id="div4">
+                <p>
+                    im #div4 but i dont move because im not #div3
+                    <br>
+                    (hover)
+                    <br>
+                    >
+                </p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="div3">
+                <p>
+                    this is an active animation
+                    <br>
+                    +
+                </p>
+            </div>
+            <div id="div5">
+                <p>
+                    i move
+                    <br>
+                    because im directly after .div3 and is a sibling of .div3 in the html code
+                </p>
+            </div>
+            <div id="div6">
+                <p>
+                    i dont move
+                    <br>
+                    because im not directly after .div3 in the html code
+                </p>
+            </div>
+        </div>
+        <div class="group">
+            <div class="div4">
+                <p>
+                    uwu
+                    <br>
+                    ~
+                </p>
+            </div>
+            <div id="div7">
+                <p>
+                    hover over the one above me
+                    <br>
+                    this works because im after .div4 and a sibling of .div4 in the html code
+                </p>
+            </div>
+            <div id="div7">
+                <p>
+                    i also move
+                    <br>
+                    this also works because im after .div4 and a sibling of .div4 in the html code
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <link rel="stylesheet" href="styles.css">
+</body>
+</html>
